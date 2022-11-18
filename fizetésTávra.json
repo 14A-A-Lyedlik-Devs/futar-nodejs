@@ -1,0 +1,32 @@
+[
+    {
+        "_id": 0,
+        "Min Km": 1,
+        "Max Km": 2,
+        "Összeg": 500
+    },
+    {
+        "_id": 1,
+        "Min Km": 3,
+        "Max Km": 5,
+        "Összeg": 700
+    },
+    {
+        "_id": 2,
+        "Min Km": 6,
+        "Max Km": 10,
+        "Összeg": 900
+    },
+    {
+        "_id": 3,
+        "Min Km": 11,
+        "Max Km": 20,
+        "Összeg": 1400
+    },
+    {
+        "_id": 4,
+        "Min Km": 21,
+        "Max Km": 30,
+        "Összeg": 2000
+    }
+]
