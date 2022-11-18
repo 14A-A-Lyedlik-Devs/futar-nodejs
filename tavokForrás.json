@@ -1,0 +1,368 @@
+[
+  {
+    "Nap": 1,
+    "Sorszám": 7,
+    "Megtett út": 14,
+    "_id": 0
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 3,
+    "Megtett út": 10,
+    "_id": 1
+  },
+  {
+    "Nap": 1,
+    "Sorszám": 1,
+    "Megtett út": 3,
+    "_id": 2
+  },
+  {
+    "Nap": 1,
+    "Sorszám": 2,
+    "Megtett út": 3,
+    "_id": 3
+  },
+  {
+    "Nap": 1,
+    "Sorszám": 3,
+    "Megtett út": 1,
+    "_id": 4
+  },
+  {
+    "Nap": 1,
+    "Sorszám": 4,
+    "Megtett út": 9,
+    "_id": 5
+  },
+  {
+    "Nap": 1,
+    "Sorszám": 5,
+    "Megtett út": 5,
+    "_id": 6
+  },
+  {
+    "Nap": 1,
+    "Sorszám": 6,
+    "Megtett út": 2,
+    "_id": 7
+  },
+  {
+    "Nap": 1,
+    "Sorszám": 8,
+    "Megtett út": 9,
+    "_id": 8
+  },
+  {
+    "Nap": 1,
+    "Sorszám": 9,
+    "Megtett út": 8,
+    "_id": 9
+  },
+  {
+    "Nap": 1,
+    "Sorszám": 10,
+    "Megtett út": 5,
+    "_id": 10
+  },
+  {
+    "Nap": 1,
+    "Sorszám": 11,
+    "Megtett út": 6,
+    "_id": 11
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 1,
+    "Megtett út": 7,
+    "_id": 12
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 2,
+    "Megtett út": 7,
+    "_id": 13
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 4,
+    "Megtett út": 2,
+    "_id": 14
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 5,
+    "Megtett út": 4,
+    "_id": 15
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 6,
+    "Megtett út": 6,
+    "_id": 16
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 7,
+    "Megtett út": 3,
+    "_id": 17
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 8,
+    "Megtett út": 5,
+    "_id": 18
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 9,
+    "Megtett út": 8,
+    "_id": 19
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 10,
+    "Megtett út": 1,
+    "_id": 20
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 11,
+    "Megtett út": 4,
+    "_id": 21
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 12,
+    "Megtett út": 2,
+    "_id": 22
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 13,
+    "Megtett út": 3,
+    "_id": 23
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 14,
+    "Megtett út": 5,
+    "_id": 24
+  },
+  {
+    "Nap": 3,
+    "Sorszám": 15,
+    "Megtett út": 2,
+    "_id": 25
+  },
+  {
+    "Nap": 4,
+    "Sorszám": 4,
+    "Megtett út": 28,
+    "_id": 26
+  },
+  {
+    "Nap": 4,
+    "Sorszám": 1,
+    "Megtett út": 11,
+    "_id": 27
+  },
+  {
+    "Nap": 4,
+    "Sorszám": 2,
+    "Megtett út": 2,
+    "_id": 28
+  },
+  {
+    "Nap": 4,
+    "Sorszám": 3,
+    "Megtett út": 3,
+    "_id": 29
+  },
+  {
+    "Nap": 4,
+    "Sorszám": 5,
+    "Megtett út": 7,
+    "_id": 30
+  },
+  {
+    "Nap": 4,
+    "Sorszám": 6,
+    "Megtett út": 11,
+    "_id": 31
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 1,
+    "Megtett út": 2,
+    "_id": 32
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 2,
+    "Megtett út": 5,
+    "_id": 33
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 3,
+    "Megtett út": 2,
+    "_id": 34
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 4,
+    "Megtett út": 6,
+    "_id": 35
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 5,
+    "Megtett út": 2,
+    "_id": 36
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 6,
+    "Megtett út": 3,
+    "_id": 37
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 7,
+    "Megtett út": 2,
+    "_id": 38
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 8,
+    "Megtett út": 6,
+    "_id": 39
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 9,
+    "Megtett út": 2,
+    "_id": 40
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 10,
+    "Megtett út": 2,
+    "_id": 41
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 11,
+    "Megtett út": 4,
+    "_id": 42
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 12,
+    "Megtett út": 2,
+    "_id": 43
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 13,
+    "Megtett út": 2,
+    "_id": 44
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 14,
+    "Megtett út": 4,
+    "_id": 45
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 15,
+    "Megtett út": 4,
+    "_id": 46
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 16,
+    "Megtett út": 5,
+    "_id": 47
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 21,
+    "Megtett út": 2,
+    "_id": 48
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 17,
+    "Megtett út": 7,
+    "_id": 49
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 18,
+    "Megtett út": 2,
+    "_id": 50
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 19,
+    "Megtett út": 3,
+    "_id": 51
+  },
+  {
+    "Nap": 7,
+    "Sorszám": 1,
+    "Megtett út": 5,
+    "_id": 52
+  },
+  {
+    "Nap": 7,
+    "Sorszám": 2,
+    "Megtett út": 12,
+    "_id": 53
+  },
+  {
+    "Nap": 7,
+    "Sorszám": 8,
+    "Megtett út": 25,
+    "_id": 54
+  },
+  {
+    "Nap": 7,
+    "Sorszám": 3,
+    "Megtett út": 6,
+    "_id": 55
+  },
+  {
+    "Nap": 7,
+    "Sorszám": 4,
+    "Megtett út": 6,
+    "_id": 56
+  },
+  {
+    "Nap": 7,
+    "Sorszám": 5,
+    "Megtett út": 6,
+    "_id": 57
+  },
+  {
+    "Nap": 7,
+    "Sorszám": 6,
+    "Megtett út": 9,
+    "_id": 58
+  },
+  {
+    "Nap": 7,
+    "Sorszám": 7,
+    "Megtett út": 6,
+    "_id": 59
+  },
+  {
+    "Nap": 5,
+    "Sorszám": 20,
+    "Megtett út": 7,
+    "_id": 60
+  }
+]
