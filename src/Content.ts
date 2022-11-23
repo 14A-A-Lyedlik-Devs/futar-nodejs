@@ -47,6 +47,9 @@ export default class Content {
         res.write(`A hét legtöbb fuvarját a(z) ${m.NapALegtöbbFuvarral()}. napon teljesítették.\n`);
 
         // 6. feladat:
+        res.write("\n6. feladat\n");
+        res.write(`Az egyes napokon az alábbi kilométereket tekerte le a futár:\n`);
+        res.write(m.NapokStatStr());
 
         // 7. feladat:
         res.write("\n7. feladat\n");

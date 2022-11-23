@@ -32,6 +32,20 @@ export default class Megoldás {
         return hétNapjai.filter(nap => !this._távok.map(t => t.nap).includes(nap));
     }
 
+    public NapokStat(): number[] {
+        const napokKilométerei: number[] = new Array(8).fill(0);
+        this._távok.forEach(t => (napokKilométerei[t.nap] += t.megtettÚt));
+        return napokKilométerei;
+    }
+
+    public NapokStatStr(): string {
+        let eredmény = "";
+        for (let i = 1; i < this.NapokStat().length; i++) {
+            eredmény += `${i}. nap: ${this.NapokStat()[i]} km\n`;
+        }
+        return eredmény;
+    }
+
     public NapALegtöbbFuvarral(): number {
         const napok: number[] = this._távok.map(t => t.nap);
         const napokSzáma: number[] = napok.map(nap => napok.filter(n => n === nap).length);
