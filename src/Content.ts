@@ -37,6 +37,8 @@ export default class Content {
         // 3. feladat:
 
         // 4. feladat:
+        res.write("2. feladat\n");
+        res.write(`A futár szabadnapjai: ${m.SzabadNapok().join(", ")}\n`);
 
         // 5. feladat:
 
