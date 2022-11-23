@@ -1,6 +1,7 @@
 ﻿import fs from "fs"; //  https://nodejs.org/docs/latest-v14.x/api/fs.html
 import http from "http"; //  https://nodejs.org/docs/latest-v14.x/api/http.html
 import url from "url"; //  https://nodejs.org/docs/latest-v14.x/api/url.html
+import Megoldás from "./Megoldás";
 
 export default class Content {
     public static content(req: http.IncomingMessage, res: http.ServerResponse): void {
@@ -27,8 +28,11 @@ export default class Content {
         // Kezd a kódolást innen -->
 
         // 1. feladat:
+        const m: Megoldás = new Megoldás("fizetésTávra.json", "távokForrás.json");
 
         // 2. feladat:
+        res.write("2. feladat\n");
+        res.write(`Az első nap távja: ${m.LegelsőÚtKm()} km\n`);
 
         // 3. feladat:
 
