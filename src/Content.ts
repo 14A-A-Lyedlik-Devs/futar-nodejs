@@ -49,6 +49,12 @@ export default class Content {
         // 6. feladat:
 
         // 7. feladat:
+        res.write("\n7. feladat\n");
+
+        const inputTáv = parseInt(params.get("tav") as string);
+        res.write(`Kérek egy távot: <input type="number" name="tav" value=${inputTáv} min="1" max="30" step="1"> km\n`);
+
+        res.write(`A díjazás a megadott távon: ${m.DíjazásTávUtán(inputTáv)} Ft\n`);
 
         // 8. feladat:
 

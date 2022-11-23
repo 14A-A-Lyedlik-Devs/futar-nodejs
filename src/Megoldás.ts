@@ -47,4 +47,11 @@ export default class Megoldás {
         }
         return szum;
     }
+
+    public DíjazásTávUtán(inputTáv: number): number {
+        // find összeg where inputTáv is between minKm and maxKm
+        const fizetés: Fizetés | undefined = this._fizetések.find(f => f.minKm <= inputTáv && f.maxKm >= inputTáv);
+
+        return fizetés?.összeg ?? 0;
+    }
 }
