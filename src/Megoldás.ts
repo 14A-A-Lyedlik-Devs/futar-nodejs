@@ -45,4 +45,11 @@ export default class Megoldás {
         }
         return eredmény;
     }
+
+    public NapALegtöbbFuvarral(): number {
+        const napok: number[] = this._távok.map(t => t.nap);
+        const napokSzáma: number[] = napok.map(nap => napok.filter(n => n === nap).length);
+
+        return napok[napokSzáma.indexOf(Math.max(...napokSzáma))];
+    }
 }
