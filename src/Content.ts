@@ -60,6 +60,8 @@ export default class Content {
         res.write(`A díjazás a megadott távon: ${m.DíjazásTávUtán(inputTáv)} Ft\n`);
 
         // 8. feladat:
+        res.write("\n8. feladat\n");
+        res.write(`A fájl elkészült: ${m.FájlbaÍrás("dijazas.txt")}\n`);
 
         // 9. feladat:
         res.write("\n9. feladat\n");
