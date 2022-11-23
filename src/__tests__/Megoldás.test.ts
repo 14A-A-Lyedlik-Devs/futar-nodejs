@@ -6,4 +6,8 @@ describe("Megoldás osztály unit tesztek", () => {
     it("Megoldás osztálypéldány ellenőrzése", () => {
         expect(m).toBeInstanceOf(Megoldás);
     });
+
+    it("Legelső út ellenőrzése", () => {
+        expect(m.LegelsőÚtKm()).toBe(3);
+    });
 });
