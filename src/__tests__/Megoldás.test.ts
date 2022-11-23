@@ -1,4 +1,5 @@
 import Megoldás from "../Megoldás";
+import fs from "fs";
 
 describe("Megoldás osztály unit tesztek", () => {
     const m: Megoldás = new Megoldás("fizetésTávra.json", "távokForrás.json");
@@ -35,5 +36,10 @@ describe("Megoldás osztály unit tesztek", () => {
         expect(m.DíjazásTávUtán(11)).toBe(1400);
         expect(m.DíjazásTávUtán(21)).toBe(2000);
         expect(m.DíjazásTávUtán(31)).toBe(0);
+    });
+
+    it("8. feladat állományok összehasonlítása", async () => {
+        await m.FájlbaÍrás("dijazas.txt");
+        expect(fs.readFileSync("dijazas.txt", "utf8").toString()).toBe(fs.readFileSync("dijazas_ref.txt", "utf8").toString());
     });
 });
