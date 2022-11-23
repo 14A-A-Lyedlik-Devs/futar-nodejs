@@ -18,7 +18,6 @@ export default class Megoldás {
 
     public SzabadNapok(): number[] {
         const szabadNapok: number[] = [1, 2, 3, 4, 5, 6, 7];
-        szabadNapok.filter(nap => !this._távok.map(t => t.nap).includes(nap));
-        return szabadNapok;
+        return szabadNapok.filter(nap => !this._távok.map(t => t.nap).includes(nap));
     }
 }
