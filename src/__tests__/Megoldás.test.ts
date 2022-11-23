@@ -23,7 +23,6 @@ describe("Megoldás osztály unit tesztek", () => {
         expect(m.NapALegtöbbFuvarral()).toBe(5);
     });
 
-
     it("Heti fizetés ellenőrzése", () => {
         expect(m.HetiFizetés()).toBe(48500);
     });
