@@ -43,6 +43,8 @@ export default class Content {
         res.write(`A futár szabadnapjai: ${m.SzabadNapok().join(", ")}\n`);
 
         // 5. feladat:
+        res.write("\n5. feladat\n");
+        res.write(`A hét legtöbb fuvarját a(z) ${m.NapALegtöbbFuvarral()}. napon teljesítették.\n`);
 
         // 6. feladat:
 

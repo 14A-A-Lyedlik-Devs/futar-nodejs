@@ -31,4 +31,11 @@ export default class Megoldás {
         const hétNapjai: number[] = [1, 2, 3, 4, 5, 6, 7];
         return hétNapjai.filter(nap => !this._távok.map(t => t.nap).includes(nap));
     }
+
+    public NapALegtöbbFuvarral(): number {
+        const napok: number[] = this._távok.map(t => t.nap);
+        const napokSzáma: number[] = napok.map(nap => napok.filter(n => n === nap).length);
+
+        return napok[napokSzáma.indexOf(Math.max(...napokSzáma))];
+    }
 }

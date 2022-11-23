@@ -18,4 +18,8 @@ describe("Megoldás osztály unit tesztek", () => {
     it("Utolsó út ellenőrzése", () => {
         expect(m.UtolsóÚt()).toBe(25);
     });
+
+    it("Nap a legtöbb fuvarral ellenőrzése", () => {
+        expect(m.NapALegtöbbFuvarral()).toBe(5);
+    });
 });
