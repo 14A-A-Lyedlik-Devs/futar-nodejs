@@ -18,7 +18,7 @@ export default class Content {
         res.write("<meta charset='utf-8'>");
         res.write("<style>input, pre {font-family:monospace; font-size:1em; font-weight:bold;}</style>");
         res.write("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
-        res.write("<title>Jedlik Ts Template</title>");
+        res.write("<title>Futár</title>");
         res.write("</head>");
         res.write("<body><form><pre>");
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -26,19 +26,23 @@ export default class Content {
 
         // Kezd a kódolást innen -->
 
-        res.write("Egyszerű Hello World! (2022/2023)\n");
+        // 1. feladat:
 
-        // Tetszőleges html teg-ek és attribútumok beépítése:
-        res.write("<span style='color: blue;'><i>Színes és dőlt Hello World!'</i></span>\n");
+        // 2. feladat:
 
-        // Próbáljuk számra konvertálni a "kor" paraméter (http://localhost:8080/?kor=16) értékét:
-        let korod = parseInt(params.get("kor") as string);
-        // Ha nincs "kor" paraméter megadva, vagy nem lehet számra konvertálni értékét,
-        // akkor a "korod" változóba NaN érték kerül, ilyenkor legyen 18 év az értéke:
-        if (isNaN(korod)) korod = 18;
+        // 3. feladat:
 
-        res.write(`<label>Kérem a korod: <input type='number' name='kor' value=${korod} style='max-width:100px;' onChange='this.form.submit();'></label>\n`);
-        res.write(`Te ${korod} éves vagy!\n`);
+        // 4. feladat:
+
+        // 5. feladat:
+
+        // 6. feladat:
+
+        // 7. feladat:
+
+        // 8. feladat:
+
+        // 9. feladat:
 
         // <---- Fejezd be a kódolást
 
