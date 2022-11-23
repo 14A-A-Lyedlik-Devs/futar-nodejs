@@ -32,7 +32,7 @@ export default class Content {
 
         // 2. feladat:
         res.write("2. feladat\n");
-        res.write(`Az első nap távja: ${m.LegelsőÚtKm()} km\n`);
+        res.write(`Az első nap első távja: ${m.LegelsőÚtKm()} km\n`);
 
         // 3. feladat:
         res.write("\n3. feladat\n");
@@ -43,6 +43,8 @@ export default class Content {
         res.write(`A futár szabadnapjai: ${m.SzabadNapok().join(", ")}\n`);
 
         // 5. feladat:
+        res.write("\n5. feladat\n");
+        res.write(`A hét legtöbb fuvarját a(z) ${m.NapALegtöbbFuvarral()}. napon teljesítették.\n`);
 
         // 6. feladat:
 
