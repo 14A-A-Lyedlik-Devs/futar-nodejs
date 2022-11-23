@@ -22,4 +22,14 @@ describe("Megoldás osztály unit tesztek", () => {
     it("Nap a legtöbb fuvarral ellenőrzése", () => {
         expect(m.NapALegtöbbFuvarral()).toBe(5);
     });
+
+    it("Díjazás táv után ellenőrzése", () => {
+        expect(m.DíjazásTávUtán(0)).toBe(0);
+        expect(m.DíjazásTávUtán(2)).toBe(500);
+        expect(m.DíjazásTávUtán(3)).toBe(700);
+        expect(m.DíjazásTávUtán(6)).toBe(900);
+        expect(m.DíjazásTávUtán(11)).toBe(1400);
+        expect(m.DíjazásTávUtán(21)).toBe(2000);
+        expect(m.DíjazásTávUtán(31)).toBe(0);
+    });
 });
