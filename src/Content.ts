@@ -32,7 +32,7 @@ export default class Content {
 
         // 2. feladat:
         res.write("2. feladat\n");
-        res.write(`Az első nap távja: ${m.LegelsőÚtKm()} km\n`);
+        res.write(`Az első nap első távja: ${m.LegelsőÚtKm()} km\n`);
 
         // 3. feladat:
         res.write("3. feladat\n");
