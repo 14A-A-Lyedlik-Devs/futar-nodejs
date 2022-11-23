@@ -22,4 +22,8 @@ describe("Megoldás osztály unit tesztek", () => {
     it("Egyes napokon megtett távolságok ellenőrzése", () => {
         expect(m.NapokStat()).toStrictEqual([0, 65, 0, 69, 62, 74, 0, 75]);
     });
+    
+    it("Nap a legtöbb fuvarral ellenőrzése", () => {
+        expect(m.NapALegtöbbFuvarral()).toBe(5);
+    });
 });
