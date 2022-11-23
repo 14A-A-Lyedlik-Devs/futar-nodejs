@@ -53,6 +53,8 @@ export default class Content {
         // 8. feladat:
 
         // 9. feladat:
+        res.write("\n9. feladat\n");
+        res.write(`A futár a heti munkájáért ${m.HetiFizetés()} Ft-ot kap.\n`);
 
         // <---- Fejezd be a kódolást
 
