@@ -10,4 +10,8 @@ describe("Megoldás osztály unit tesztek", () => {
     it("Legelső út ellenőrzése", () => {
         expect(m.LegelsőÚtKm()).toBe(3);
     });
+
+    it("Szabad napok ellenőrzése", () => {
+        expect(m.SzabadNapok()).toStrictEqual([2, 6]);
+    });
 });
