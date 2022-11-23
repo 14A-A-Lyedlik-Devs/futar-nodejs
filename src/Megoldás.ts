@@ -15,4 +15,10 @@ export default class Megoldás {
         // 1. nap and 1. sorszám
         return this._távok.find(t => t.nap === 1 && t.sorszám === 1)?.megtettÚt ?? 0;
     }
+
+    public SzabadNapok(): number[] {
+        const szabadNapok: number[] = [1, 2, 3, 4, 5, 6, 7];
+        szabadNapok.filter(nap => !this._távok.map(t => t.nap).includes(nap));
+        return szabadNapok;
+    }
 }
