@@ -26,4 +26,9 @@ export default class Megoldás {
 
         return this._távok.find(t => t.nap === utolsóNap && t.sorszám === utolsóSorszám)?.megtettÚt ?? 0;
     }
+
+    public SzabadNapok(): number[] {
+        const hétNapjai: number[] = [1, 2, 3, 4, 5, 6, 7];
+        return hétNapjai.filter(nap => !this._távok.map(t => t.nap).includes(nap));
+    }
 }

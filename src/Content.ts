@@ -39,6 +39,8 @@ export default class Content {
         res.write(`A hét utolsó távja: ${m.UtolsóÚt()} km\n`);
 
         // 4. feladat:
+        res.write("\n4. feladat\n");
+        res.write(`A futár szabadnapjai: ${m.SzabadNapok().join(", ")}\n`);
 
         // 5. feladat:
 
