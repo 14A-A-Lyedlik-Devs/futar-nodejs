@@ -13,6 +13,8 @@ describe("Megoldás osztály unit tesztek", () => {
 
     it("Szabad napok ellenőrzése", () => {
         expect(m.SzabadNapok()).toStrictEqual([2, 6]);
+    });
+
     it("Utolsó út ellenőrzése", () => {
         expect(m.UtolsóÚt()).toBe(25);
     });
