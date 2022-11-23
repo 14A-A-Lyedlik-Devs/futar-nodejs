@@ -19,17 +19,51 @@ export default class Content {
         res.write("<meta charset='utf-8'>");
         res.write("<style>input, pre {font-family:monospace; font-size:1em; font-weight:bold;}</style>");
         res.write("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
-        res.write("<title>Futár feladat megoldása</title>");
+        res.write("<title>Futár</title>");
         res.write("</head>");
         res.write("<body><form><pre>");
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const params = new url.URL(req.url as string, `http://${req.headers.host}/`).searchParams;
 
         // Kezd a kódolást innen -->
-        const m: Megoldás = new Megoldás("src/források/távokForrás.json");
 
-        res.write("Egyszerű Hello World! (2022/2023)\n");
-        console.log("Aaaa");
+        // 1. feladat:
+        const m: Megoldás = new Megoldás("fizetésTávra.json", "távokForrás.json");
+
+        // 2. feladat:
+        res.write("2. feladat\n");
+        res.write(`Az első nap első távja: ${m.LegelsőÚtKm()} km\n`);
+
+        // 3. feladat:
+        res.write("\n3. feladat\n");
+        res.write(`A hét utolsó távja: ${m.UtolsóÚt()} km\n`);
+
+        // 4. feladat:
+        res.write("\n4. feladat\n");
+        res.write(`A futár szabadnapjai: ${m.SzabadNapok().join(", ")}\n`);
+
+        // 5. feladat:
+        res.write("\n5. feladat\n");
+        res.write(`A hét legtöbb fuvarját a(z) ${m.NapALegtöbbFuvarral()}. napon teljesítették.\n`);
+
+        // 6. feladat:
+        res.write("\n6. feladat\n");
+        res.write(`Az egyes napokon az alábbi kilométereket tekerte le a futár:\n`);
+        res.write(m.NapokStatStr());
+
+        // 7. feladat:
+        res.write("\n7. feladat\n");
+
+        const inputTáv = parseInt(params.get("tav") as string);
+        res.write(`Kérek egy távot: <input type="number" name="tav" value=${inputTáv} min="1" max="30" step="1"> km\n`);
+
+        res.write(`A díjazás a megadott távon: ${m.DíjazásTávUtán(inputTáv)} Ft\n`);
+
+        // 8. feladat:
+
+        // 9. feladat:
+        res.write("\n9. feladat\n");
+        res.write(`A futár a heti munkájáért ${m.HetiFizetés()} Ft-ot kap.\n`);
 
         // <---- Fejezd be a kódolást
 
