@@ -15,4 +15,11 @@ export default class Megoldás {
         // 1. nap and 1. sorszám
         return this._távok.find(t => t.nap === 1 && t.sorszám === 1)?.megtettÚt ?? 0;
     }
+
+    public UtolsóÚt(): number {
+        const utolsóNap = Math.max(...this._távok.map(t => t.nap));
+        const utolsóSorszám = Math.max(...this._távok.filter(t => t.nap === utolsóNap).map(t => t.sorszám));
+
+        return this._távok.find(t => t.nap === utolsóNap && t.sorszám === utolsóSorszám)?.megtettÚt ?? 0;
+    }
 }
