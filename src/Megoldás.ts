@@ -31,4 +31,10 @@ export default class Megoldás {
         const hétNapjai: number[] = [1, 2, 3, 4, 5, 6, 7];
         return hétNapjai.filter(nap => !this._távok.map(t => t.nap).includes(nap));
     }
+
+    public NapokStat(): number[] {
+        const napokKilóméterei: number[] = new Array(8).fill(0);
+        this._távok.forEach(t => (napokKilóméterei[t.nap] += t.megtettÚt));
+        return napokKilóméterei;
+    }
 }

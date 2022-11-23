@@ -18,4 +18,8 @@ describe("Megoldás osztály unit tesztek", () => {
     it("Utolsó út ellenőrzése", () => {
         expect(m.UtolsóÚt()).toBe(25);
     });
+
+    it("Egyes napokon megtett távolságok ellenőrzése", () => {
+        expect(m.NapokStat()).toStrictEqual([0, 65, 0, 69, 62, 74, 0, 75]);
+    });
 });

@@ -45,6 +45,11 @@ export default class Content {
         // 5. feladat:
 
         // 6. feladat:
+        res.write("\n6. feladat\n");
+        res.write(`Az egyes napokon az alábbi kilómétereket tekerte le a futár:\n`);
+        for (let i = 1; i < m.NapokStat().length; i++) {
+            res.write(`${i}. nap: ${m.NapokStat()[i]} km \n`);
+        }
 
         // 7. feladat:
 
