@@ -38,4 +38,8 @@ export default class Megoldás {
 
         return napok[napokSzáma.indexOf(Math.max(...napokSzáma))];
     }
+
+    public HetiFizetés(): number {
+        return this._fizetések.reduce((sum, fizetés) => sum + fizetés.összeg, 0);
+    }
 }
