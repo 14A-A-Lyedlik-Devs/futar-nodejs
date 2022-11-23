@@ -19,4 +19,11 @@ export default class Megoldás {
 
         return this._távok.find(t => t.nap === futárElsőNapja && t.sorszám === futárElsőNapja)?.megtettÚt ?? 0;
     }
+
+    public UtolsóÚt(): number {
+        const utolsóNap = Math.max(...this._távok.map(t => t.nap));
+        const utolsóSorszám = Math.max(...this._távok.filter(t => t.nap === utolsóNap).map(t => t.sorszám));
+
+        return this._távok.find(t => t.nap === utolsóNap && t.sorszám === utolsóSorszám)?.megtettÚt ?? 0;
+    }
 }
