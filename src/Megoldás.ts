@@ -33,8 +33,16 @@ export default class Megoldás {
     }
 
     public NapokStat(): number[] {
-        const napokKilóméterei: number[] = new Array(8).fill(0);
-        this._távok.forEach(t => (napokKilóméterei[t.nap] += t.megtettÚt));
-        return napokKilóméterei;
+        const napokKilométerei: number[] = new Array(8).fill(0);
+        this._távok.forEach(t => (napokKilométerei[t.nap] += t.megtettÚt));
+        return napokKilométerei;
+    }
+
+    public NapokStatStr(): string {
+        let eredmény = "";
+        for (let i = 1; i < this.NapokStat().length; i++) {
+            eredmény += `${i}. nap: ${this.NapokStat()[i]} km\n`;
+        }
+        return eredmény;
     }
 }
