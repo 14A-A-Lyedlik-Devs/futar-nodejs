@@ -40,6 +40,11 @@ export default class Megoldás {
     }
 
     public HetiFizetés(): number {
-        return this._fizetések.reduce((sum, fizetés) => sum + fizetés.összeg, 0);
+        let szum = 0;
+        for (const táv of this._távok) {
+            const fizetés = this._fizetések.find(f => f.minKm <= táv.megtettÚt && f.maxKm >= táv.megtettÚt)?.összeg ?? 0;
+            szum += fizetés;
+        }
+        return szum;
     }
 }
