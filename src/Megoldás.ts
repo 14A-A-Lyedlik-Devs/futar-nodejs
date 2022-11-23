@@ -39,6 +39,15 @@ export default class Megoldás {
         return napok[napokSzáma.indexOf(Math.max(...napokSzáma))];
     }
 
+    public HetiFizetés(): number {
+        let szum = 0;
+        for (const táv of this._távok) {
+            const fizetés = this._fizetések.find(f => f.minKm <= táv.megtettÚt && f.maxKm >= táv.megtettÚt)?.összeg ?? 0;
+            szum += fizetés;
+        }
+        return szum;
+    }
+
     public DíjazásTávUtán(inputTáv: number): number {
         // find összeg where inputTáv is between minKm and maxKm
         const fizetés: Fizetés | undefined = this._fizetések.find(f => f.minKm <= inputTáv && f.maxKm >= inputTáv);
