@@ -35,7 +35,7 @@ export default class Content {
         res.write(`Az első nap távja: ${m.LegelsőÚtKm()} km\n`);
 
         // 3. feladat:
-        res.write("3. feladat\n");
+        res.write("\n3. feladat\n");
         res.write(`A hét utolsó távja: ${m.UtolsóÚt()} km\n`);
 
         // 4. feladat:
