@@ -54,4 +54,28 @@ export default class Megoldás {
 
         return fizetés?.összeg ?? 0;
     }
+
+    public FájlbaÍrás(fájlNév: string): string {
+        // go through each day and út and write to file with the correct összeg
+        const napok: number[] = this._távok.map(t => t.nap);
+        const napokSzáma: number[] = napok.map(nap => napok.filter(n => n === nap).length);
+
+        const napokSzámaMax: number = Math.max(...napokSzáma);
+
+        let szöveg = "";
+        for (let i = 0; i < napokSzámaMax; i++) {
+            const nap: number = napok[i];
+            const sorszám: number = i + 1;
+            const táv: Táv | undefined = this._távok.find(t => t.nap === nap && t.sorszám === sorszám);
+            if (táv) {
+                const fizetés: Fizetés | undefined = this._fizetések.find(f => f.minKm <= táv.megtettÚt && f.maxKm >= táv.megtettÚt);
+                if (fizetés) {
+                    szöveg += `${nap}. nap ${sorszám}. út: ${fizetés.összeg} Ft\n`;
+                }
+            }
+        }
+
+        fs.writeFileSync(fájlNév, szöveg);
+        return fájlNév;
+    }
 }
