@@ -10,4 +10,9 @@ export default class Megoldás {
         this._fizetések = JSON.parse(fs.readFileSync(fizetésFájl, "utf8"));
         this._távok = JSON.parse(fs.readFileSync(távokFájl, "utf8"));
     }
+
+    public LegelsőÚtKm(): number {
+        // 1. nap and 1. sorszám
+        return this._távok.find(t => t.nap === 1 && t.sorszám === 1)?.megtettÚt ?? 0;
+    }
 }
