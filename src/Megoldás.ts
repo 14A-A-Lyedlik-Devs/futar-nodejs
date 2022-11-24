@@ -10,6 +10,7 @@ export default class Megoldás {
         this._fizetések = JSON.parse(fs.readFileSync(fizetésFájl, "utf8"));
         fs.readFileSync(távokFájl, "utf8")
             .toString()
+            .trim()
             .split("\n")
             .forEach(sor => {
                 this._távok.push({
@@ -30,8 +31,8 @@ export default class Megoldás {
     }
 
     public UtolsóÚt(): number {
-        const utolsóNap = Math.max(...this._távok.map(t => t.nap));
-        const utolsóSorszám = Math.max(...this._távok.filter(t => t.nap === utolsóNap).map(t => t.sorszám));
+        const utolsóNap: number = this._távok.reduce((max, táv) => (táv.nap > max ? táv.nap : max), this._távok[0].nap);
+        const utolsóSorszám: number = this._távok.filter(t => t.nap === utolsóNap).length;
 
         return this._távok.find(t => t.nap === utolsóNap && t.sorszám === utolsóSorszám)?.megtettÚt ?? 0;
     }
