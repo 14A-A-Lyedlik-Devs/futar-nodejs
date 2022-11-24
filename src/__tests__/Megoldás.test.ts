@@ -2,7 +2,8 @@ import Megoldás from "../Megoldás";
 import fs from "fs";
 
 describe("Megoldás osztály unit tesztek", () => {
-    const m: Megoldás = new Megoldás("fizetésTávra.json", "távokForrás.json");
+    // const m: Megoldás = new Megoldás("fizetésTávra.json", "távokForrás.json");
+    const m: Megoldás = new Megoldás("fizetésTávra.json", "távokForrás.txt");
 
     it("Megoldás osztálypéldány ellenőrzése", () => {
         expect(m).toBeInstanceOf(Megoldás);

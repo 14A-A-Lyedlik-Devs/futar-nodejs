@@ -28,7 +28,7 @@ export default class Content {
         // Kezd a kódolást innen -->
 
         // 1. feladat:
-        const m: Megoldás = new Megoldás("fizetésTávra.json", "távokForrás.json");
+        const m: Megoldás = new Megoldás("fizetésTávra.json", "távokForrás.txt");
 
         // 2. feladat:
         res.write("2. feladat\n");

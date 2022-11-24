@@ -4,11 +4,20 @@ import Táv from "./Táv";
 
 export default class Megoldás {
     private _fizetések: Fizetés[];
-    private _távok: Táv[];
+    private _távok: Táv[] = [];
 
     constructor(fizetésFájl: string, távokFájl: string) {
         this._fizetések = JSON.parse(fs.readFileSync(fizetésFájl, "utf8"));
-        this._távok = JSON.parse(fs.readFileSync(távokFájl, "utf8"));
+        fs.readFileSync(távokFájl, "utf8")
+            .toString()
+            .split("\n")
+            .forEach(sor => {
+                this._távok.push({
+                    nap: parseInt(sor.split(" ")[0]),
+                    sorszám: parseInt(sor.split(" ")[1]),
+                    megtettÚt: parseInt(sor.split(" ")[2]),
+                });
+            });
     }
 
     public LegelsőÚtKm(): number {
@@ -21,6 +30,23 @@ export default class Megoldás {
     }
 
     public UtolsóÚt(): number {
+        const napok: number[] = this._távok.map(t => t.nap);
+        const napokSzáma: number[] = napok.map(nap => napok.filter(n => n === nap).length);
+
+        const napokSzámaMax: number = Math.max(...napokSzáma);
+
+        const utolsóNap: number = napok[napokSzáma.indexOf(napokSzámaMax)];
+
+        const utolsóNapSzáma: number = napokSzámaMax;
+
+        const utolsóNapTávok: Táv[] = this._távok.filter(t => t.nap === utolsóNap);
+
+        const utolsóNapTávokSzáma: number = utolsóNapTávok.length;
+
+        const utolsóNapTávokSzámaMax: number = Math.max(...utolsóNapTávok.map(t => t.sorszám));
+
+        return utolsóNapTávokSzámaMax;
+
         const utolsóNap = Math.max(...this._távok.map(t => t.nap));
         const utolsóSorszám = Math.max(...this._távok.filter(t => t.nap === utolsóNap).map(t => t.sorszám));
 
