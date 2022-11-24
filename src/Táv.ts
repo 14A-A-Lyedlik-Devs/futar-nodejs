@@ -1,7 +1,7 @@
 export default class Táv {
-    nap: number;
-    sorszám: number;
-    megtettÚt: number;
+    public nap: number;
+    public sorszám: number;
+    public megtettÚt: number;
 
     constructor(sor: string) {
         const m: string[] = sor.split(" ");
