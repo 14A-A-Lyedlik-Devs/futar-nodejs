@@ -3,9 +3,10 @@ export default class Táv {
     sorszám: number;
     megtettÚt: number;
 
-    constructor(nap: number, sorszám: number, megtettÚt: number) {
-        this.nap = nap;
-        this.sorszám = sorszám;
-        this.megtettÚt = megtettÚt;
+    constructor(sor: string) {
+        const m: string[] = sor.split(" ");
+        this.nap = parseInt(m[0]);
+        this.sorszám = parseInt(m[1]);
+        this.megtettÚt = parseInt(m[2]);
     }
 }
