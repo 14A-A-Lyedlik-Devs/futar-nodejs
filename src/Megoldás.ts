@@ -30,23 +30,6 @@ export default class Megoldás {
     }
 
     public UtolsóÚt(): number {
-        const napok: number[] = this._távok.map(t => t.nap);
-        const napokSzáma: number[] = napok.map(nap => napok.filter(n => n === nap).length);
-
-        const napokSzámaMax: number = Math.max(...napokSzáma);
-
-        const utolsóNap: number = napok[napokSzáma.indexOf(napokSzámaMax)];
-
-        const utolsóNapSzáma: number = napokSzámaMax;
-
-        const utolsóNapTávok: Táv[] = this._távok.filter(t => t.nap === utolsóNap);
-
-        const utolsóNapTávokSzáma: number = utolsóNapTávok.length;
-
-        const utolsóNapTávokSzámaMax: number = Math.max(...utolsóNapTávok.map(t => t.sorszám));
-
-        return utolsóNapTávokSzámaMax;
-
         const utolsóNap = Math.max(...this._távok.map(t => t.nap));
         const utolsóSorszám = Math.max(...this._távok.filter(t => t.nap === utolsóNap).map(t => t.sorszám));
 
