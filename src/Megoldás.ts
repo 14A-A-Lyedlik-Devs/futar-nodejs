@@ -13,10 +13,11 @@ export default class Megoldás {
             .trim()
             .split("\n")
             .forEach(sor => {
+                const m: string[] = sor.split(" ");
                 this._távok.push({
-                    nap: parseInt(sor.split(" ")[0]),
-                    sorszám: parseInt(sor.split(" ")[1]),
-                    megtettÚt: parseInt(sor.split(" ")[2]),
+                    nap: parseInt(m[0]),
+                    sorszám: parseInt(m[1]),
+                    megtettÚt: parseInt(m[2]),
                 });
             });
     }
