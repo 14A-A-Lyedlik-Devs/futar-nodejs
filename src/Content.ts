@@ -28,28 +28,29 @@ export default class Content {
         // Kezd a kódolást innen -->
 
         // 1. feladat:
-        const m: Megoldás = new Megoldás("fizetésTávra.json", "távokForrás.txt");
+        //const m: Megoldás = new Megoldás("fizetésTávra.json", "távokForrás.txt");
+        const m: Megoldás = new Megoldás("fizetésTávra.json", "távokForrás_alternative.txt");
 
         // 2. feladat:
         res.write("2. feladat\n");
-        res.write(`Az első nap első távja: ${m.LegelsőÚtKm()} km\n`);
+        res.write(`Az első nap első távja: ${m.LegelsőÚtKm} km\n`);
 
         // 3. feladat:
         res.write("\n3. feladat\n");
-        res.write(`A hét utolsó távja: ${m.UtolsóÚt()} km\n`);
+        res.write(`A hét utolsó távja: ${m.UtolsóÚt} km\n`);
 
         // 4. feladat:
         res.write("\n4. feladat\n");
-        res.write(`A futár szabadnapjai: ${m.SzabadNapok().join(", ")}\n`);
+        res.write(`A futár szabadnapjai: ${m.SzabadNapok}\n`);
 
         // 5. feladat:
         res.write("\n5. feladat\n");
-        res.write(`A hét legtöbb fuvarját a(z) ${m.NapALegtöbbFuvarral()}. napon teljesítették.\n`);
+        res.write(`A hét legtöbb fuvarját a(z) ${m.NapALegtöbbFuvarral}. napon teljesítették.\n`);
 
         // 6. feladat:
         res.write("\n6. feladat\n");
         res.write(`Az egyes napokon az alábbi kilométereket tekerte le a futár:\n`);
-        res.write(m.NapokStatStr());
+        res.write(m.NapokStatStr);
 
         // 7. feladat:
         res.write("\n7. feladat\n");
@@ -65,9 +66,9 @@ export default class Content {
 
         // 9. feladat:
         res.write("\n9. feladat\n");
-        res.write(`A futár a heti munkájáért ${m.HetiFizetés()} Ft-ot kap.\n`);
+        res.write(`A futár a heti munkájáért ${m.HetiFizetés} Ft-ot kap.\n`);
 
-        // <---- Fejezd be a kódolást
+        // <---- Fejezd be a kódolást itt
 
         res.write("</pre></form></body></html>");
         res.end();
