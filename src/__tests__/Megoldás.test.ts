@@ -6,39 +6,35 @@ describe("Megoldás osztály unit tesztek", () => {
     // const m: Megoldás = new Megoldás("fizetésTávra.json", "távokForrás.json");
     const m: Megoldás = new Megoldás("fizetésTávra.json", "távokForrás.txt");
 
-    it("Megoldás osztálypéldány ellenőrzése", () => {
+    it("1. feladat: Megoldás osztálypéldány ellenőrzése", () => {
         expect(m).toBeInstanceOf(Megoldás);
     });
 
-    it("Legelső út ellenőrzése", () => {
+    it("2. feladat: Legelső út ellenőrzése", () => {
         expect(m.LegelsőÚtKm).toBe(3);
     });
 
-    it("Utolsó út ellenőrzése", () => {
+    it("3. feladat: Utolsó út ellenőrzése", () => {
         expect(m.UtolsóÚt).toBe(25);
     });
 
-    it("Szabad napok ellenőrzése", () => {
+    it("4. feladat: Szabad napok ellenőrzése", () => {
         expect(m.SzabadNapok).toBe(`2, 6`);
     });
 
-    it("Egyes napokon megtett távolságok ellenőrzése", () => {
-        expect(m.NapokStat).toStrictEqual([0, 65, 0, 69, 62, 74, 0, 75]);
-    });
-
-    it("Egyes napokon megtett távolságok kimenetének ellenőrzése", () => {
-        expect(m.NapokStatStr).toBe(`1. nap: 65 km\n2. nap: 0 km\n3. nap: 69 km\n4. nap: 62 km\n5. nap: 74 km\n6. nap: 0 km\n7. nap: 75 km\n`);
-    });
-
-    it("Nap a legtöbb fuvarral ellenőrzése", () => {
+    it("5. feladat: Nap a legtöbb fuvarral ellenőrzése", () => {
         expect(m.NapALegtöbbFuvarral).toBe(5);
     });
 
-    it("Heti fizetés ellenőrzése", () => {
-        expect(m.HetiFizetés).toBe(48500);
+    it("6. feladat: Egyes napokon megtett távolságok ellenőrzése", () => {
+        expect(m.NapokStat).toStrictEqual([0, 65, 0, 69, 62, 74, 0, 75]);
     });
 
-    it("Díjazás táv után ellenőrzése", () => {
+    it("6. feladat: Egyes napokon megtett távolságok kimenetének ellenőrzése", () => {
+        expect(m.NapokStatStr).toBe(`1. nap: 65 km\n2. nap: 0 km\n3. nap: 69 km\n4. nap: 62 km\n5. nap: 74 km\n6. nap: 0 km\n7. nap: 75 km\n`);
+    });
+
+    it("7. feladat: Díjazás táv után ellenőrzése", () => {
         expect(m.DíjazásTávUtán(0)).toBe(0);
         expect(m.DíjazásTávUtán(2)).toBe(500);
         expect(m.DíjazásTávUtán(3)).toBe(700);
@@ -49,7 +45,11 @@ describe("Megoldás osztály unit tesztek", () => {
     });
 
     it("8. feladat állományok összehasonlítása", async () => {
-        await m.FájlbaÍrás("dijazas.txt");
+        m.FájlbaÍrás("dijazas.txt");
         expect(fs.readFileSync("dijazas.txt", "utf8").toString()).toBe(fs.readFileSync("dijazas_ref.txt", "utf8").toString());
+    });
+
+    it("9. feladat: Heti fizetés ellenőrzése", () => {
+        expect(m.HetiFizetés).toBe(48500);
     });
 });
