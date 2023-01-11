@@ -68,6 +68,13 @@ export default class Content {
         res.write("\n9. feladat\n");
         res.write(`A futár a heti munkájáért ${m.HetiFizetés} Ft-ot kap.\n`);
 
+        // forrásfájl tartalma:
+        res.write("\nForrásfájl tartalma:\n");
+        fs.readFileSync("dijazas.txt", "utf8")
+            .toString()
+            .split("\n")
+            .forEach(line => res.write(`${line.trim()}\n`));
+
         // <---- Fejezd be a kódolást itt
 
         res.write("</pre></form></body></html>");
